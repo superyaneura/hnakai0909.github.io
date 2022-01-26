@@ -5,37 +5,14 @@
   <meta charset="utf-8">
 
   <title>あ！スーモ！</title>
-  <style>
-    body {
-      background-color: #CE7;
-    }
-
-    i {
-      text-indent: 1em;
-      background-repeat: no-repeat;
-      background-position: left center;
-      background-size: contain;
-      display: inline-block;
-      width: 1em;
-      height: 1.1em;
-    }
-
-    .e1 { background-image: url("./img/1.png"); }
-    .e2 { background-image: url("./img/2.png"); }
-    .e3 { background-image: url("./img/3.png"); }
-    .e4 { background-image: url("./img/4.png"); }
-    .e5 { background-image: url("./img/5.png"); }
-    .e6 { background-image: url("./img/6.png"); }
-    .e7 { background-image: url("./img/7.png"); }
-
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Twitter Widgets -->
   <script>window.twttr = (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0],
       t = window.twttr || {};
     if (d.getElementById(id)) return t;
-    js = d.createElement(s);
+    js = d.createElement(s);  
     js.id = id;
     js.src = "https://platform.twitter.com/widgets.js";
     fjs.parentNode.insertBefore(js, fjs);
@@ -54,25 +31,25 @@
 
 <body>
   <div id="caution">ボタンを押すと音が出ます。音量にご注意ください。</div>
-  <button type="button" id="normal" style="width:600px;height:80px;font-size:45px;">あ！スーモ！(ふつう)</button>
-  <button type="button" id="random" style="width:600px;height:80px;font-size:45px;">あ！スーモ！(ランダム)</button>
-  <button type="button" id="infinity-normal" style="width:600px;height:80px;font-size:45px;">あ！スーモ！(ふつう無限)</button>
-  <button type="button" id="infinity" style="width:600px;height:80px;font-size:45px;">あ！スーモ！(ランダム無限)</button>
-  <button type="button" id="stop" style="width:60px;height:60px;font-size:30px;text-align:center;">止</button>
+  <button type="button" id="normal">あ！スーモ！(ふつう)</button>
+  <button type="button" id="random">あ！スーモ！(ランダム)</button>
+  <button type="button" id="infinity-normal">あ！スーモ！(ふつう無限)</button>
+  <button type="button" id="infinity">あ！スーモ！(ランダム無限)</button>
+  <button type="button" id="stop">止</button>
   <table><tbody>
     <tr id="volume_box">
       <td>音量(開始時のみ反映)</td>
       <td>
-        <input type="range" id="volume_slider" min="0" max="1" step="0.01" value="0.7" style="width:200px;height:20px;">
+        <input type="range" id="volume_slider" min="0" max="1" step="0.01" value="0.7">
         <span id="volume_slider_value">70%</span>
       </td>
     </tr>
     <tr id="rate_box">
       <td>再生速度(開始時のみ反映)</td>
       <td>
-        <input type="range" id="rate_slider" min="-2" max="2" step="0.01" value="0" style="width:200px;height:20px;">
+        <input type="range" id="rate_slider" min="-2" max="2" step="0.01" value="0">
         <span id="rate_slider_value">x1.00</span>
-        <button type="button" id="rate_reset" style="width:60px;height:40px;font-size:16px;">x1.00</button>
+        <button type="button" id="rate_reset">x1.00</button>
       </td>
       <td>再生速度ランダム(スライドバー無視)</td>
       <td>
@@ -80,10 +57,10 @@
       </td>
     </tr>
   </tbody></table>
-  <div id="box" style="font-size:2em;background:rgba(255,255,255,0.4);margin:16px;padding:16px;border-radius:8px;"></div>
+  <div id="box"></div>
   <a class="twitter-share-button" href="https://twitter.com/share" data-url="http://hnakai0909.github.io/works/suumo/" data-size="large">
 Tweet</a>
-  <button type="button" id="tweet2" style="width:250px;height:40px;">ツイート(スーモ文字列を含める)</button>
+  <button type="button" id="tweet2">ツイート(スーモ文字列を含める)</button>
   <div id="information">
     <li>2021/04/11 18時 sevenc-nanashiさんによるリポジトリリンクの追加(<a href="https://github.com/hnakai0909/hnakai0909.github.io/pull/8">PR #8</a>)をマージしました．</li>
     <li>2021/04/03 22時 HagiAyatoさんによるふつう無限モードの追加(<a href="https://github.com/hnakai0909/hnakai0909.github.io/pull/7">PR #7</a>)をマージしました．</li>
